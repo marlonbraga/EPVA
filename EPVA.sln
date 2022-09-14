@@ -3,7 +3,53 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPVA.Api", "EPVA.Api\EPVA.Api.csproj", "{A175FCC6-1C3E-4486-92B0-556A787036C7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0590C50E-EF06-4ADD-BDA2-D7243FE64A27} = {0590C50E-EF06-4ADD-BDA2-D7243FE64A27}
+		{CFB81BDB-660A-43F8-9F9E-8ADBBA787113} = {CFB81BDB-660A-43F8-9F9E-8ADBBA787113}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPVA.Application", "EPVA.Application\EPVA.Application.csproj", "{0590C50E-EF06-4ADD-BDA2-D7243FE64A27}"
+	ProjectSection(ProjectDependencies) = postProject
+		{040087A1-62CA-4D3C-A7DC-250EC90090E7} = {040087A1-62CA-4D3C-A7DC-250EC90090E7}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPVA.CrossCutting", "EPVA.CrossCutting\EPVA.CrossCutting.csproj", "{636D59DE-9208-4C7F-918F-398410A5A573}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPVA.Domain", "EPVA.Domain\EPVA.Domain.csproj", "{040087A1-62CA-4D3C-A7DC-250EC90090E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPVA.Repository", "EPVA.Repository\EPVA.Repository.csproj", "{CFB81BDB-660A-43F8-9F9E-8ADBBA787113}"
+	ProjectSection(ProjectDependencies) = postProject
+		{040087A1-62CA-4D3C-A7DC-250EC90090E7} = {040087A1-62CA-4D3C-A7DC-250EC90090E7}
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A175FCC6-1C3E-4486-92B0-556A787036C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A175FCC6-1C3E-4486-92B0-556A787036C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A175FCC6-1C3E-4486-92B0-556A787036C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A175FCC6-1C3E-4486-92B0-556A787036C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0590C50E-EF06-4ADD-BDA2-D7243FE64A27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0590C50E-EF06-4ADD-BDA2-D7243FE64A27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0590C50E-EF06-4ADD-BDA2-D7243FE64A27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0590C50E-EF06-4ADD-BDA2-D7243FE64A27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{636D59DE-9208-4C7F-918F-398410A5A573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{636D59DE-9208-4C7F-918F-398410A5A573}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{636D59DE-9208-4C7F-918F-398410A5A573}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{636D59DE-9208-4C7F-918F-398410A5A573}.Release|Any CPU.Build.0 = Release|Any CPU
+		{040087A1-62CA-4D3C-A7DC-250EC90090E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{040087A1-62CA-4D3C-A7DC-250EC90090E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{040087A1-62CA-4D3C-A7DC-250EC90090E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{040087A1-62CA-4D3C-A7DC-250EC90090E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFB81BDB-660A-43F8-9F9E-8ADBBA787113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFB81BDB-660A-43F8-9F9E-8ADBBA787113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFB81BDB-660A-43F8-9F9E-8ADBBA787113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB81BDB-660A-43F8-9F9E-8ADBBA787113}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
