@@ -18,7 +18,15 @@ namespace EPVA.Application.PlanoAula.Service
 
         public async Task<ClasseOutputDto> Criar(ClasseInputDto dto)
         {
-            var classe = mapper.Map<Classe>(dto);
+            Classe classe = new();
+            try
+            {
+                classe = mapper.Map<Classe>(dto);
+            }
+            catch (Exception ex)
+            {
+                string chuchu = ex.Message;
+            }
             await classeRepository.Save(classe);
             return mapper.Map<ClasseOutputDto>(classe);
         }

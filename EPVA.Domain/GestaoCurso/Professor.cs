@@ -9,6 +9,5 @@ namespace EPVA.Domain.GestaoCurso
         public string Nome { get; set; }
         public virtual Email? Email { get; set; }
         public virtual Password? Password { get; set; }
-        public virtual IList<Classe> Classes { get; set; }
     }
 }
