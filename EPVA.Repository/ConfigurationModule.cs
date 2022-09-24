@@ -2,6 +2,7 @@
 using EPVA.Domain.PlanoAula.Repository;
 using EPVA.Repository.Context;
 using EPVA.Repository.Database;
+using EPVA.Repository.Infrastructure;
 using EPVA.Repository.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,6 +25,8 @@ namespace EPVA.Repository
             services.AddScoped<IModuloRepository, ModuloRepository>();
             services.AddScoped<IClasseRepository, ClasseRepository>();
             services.AddScoped<IMaterialRepository, MaterialRepository>();
+            services.AddScoped<AzureBlobStorage>();
+            //services.AddHttpClient();
 
             return services;
         }

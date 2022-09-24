@@ -2,6 +2,8 @@
 using EPVA.Application.GestaoCurso.Dto;
 using EPVA.Domain.PlanoAula;
 using EPVA.Domain.PlanoAula.Repository;
+using EPVA.Repository.Infrastructure;
+using System.Net.Http;
 
 namespace EPVA.Application.GestaoCurso.Service
 {
@@ -9,16 +11,31 @@ namespace EPVA.Application.GestaoCurso.Service
     {
         private readonly IMaterialRepository materialRepository;
         private readonly IMapper mapper;
+        private IHttpClientFactory httpClientFactory;
+        private AzureBlobStorage storage;
 
-        public MaterialService(IMaterialRepository materialRepository, IMapper mapper)
+        public MaterialService(IMaterialRepository materialRepository, IMapper mapper, IHttpClientFactory httpClientFactory, AzureBlobStorage storage)
         {
             this.materialRepository = materialRepository;
             this.mapper = mapper;
+            this.httpClientFactory = httpClientFactory;
+            this.storage = storage;
         }
 
         public async Task<MaterialOutputDto> Criar(MaterialInputDto dto)
         {
-            var material = this.mapper.Map<Material>(dto);
+            Material material = this.mapper.Map<Material>(dto);
+            HttpClient httpClient = this.httpClientFactory.CreateClient();
+            using HttpResponseMessage response = await httpClient.GetAsync(material.Backdrop);
+            if (response.IsSuccessStatusCode)
+            {
+                using var stream = await response.Content.ReadAsStreamAsync();
+                var fileName = $"{Guid.NewGuid()}.pdf";
+                var pathStorage = await this.storage.UploadFile(fileName, stream);
+                material.Backdrop = pathStorage;
+
+            }
+
             await this.materialRepository.Save(material);
             return this.mapper.Map<MaterialOutputDto>(material);
         }

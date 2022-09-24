@@ -1,6 +1,7 @@
 using EPVA.Application.GestaoCurso.Dto;
 using EPVA.Application.GestaoCurso.Handler.Command;
 using EPVA.Application.GestaoCurso.Handler.Query;
+using EPVA.Repository.Infrastructure;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
