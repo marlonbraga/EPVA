@@ -1,4 +1,6 @@
-﻿namespace EPVA.Domain.GestaoCurso.ValueObject
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace EPVA.Domain.GestaoCurso.ValueObject
 {
     public class Email
     {

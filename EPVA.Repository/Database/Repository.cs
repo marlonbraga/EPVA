@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
-using EPVA.CrossCutting.Repository;
+﻿using EPVA.CrossCutting.Repository;
 using EPVA.Repository.Context;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using System.Data;
 using System.Linq.Expressions;
 
@@ -12,7 +12,7 @@ namespace EPVA.Repository.Database
         protected DbSet<T> Query { get; set; }
         protected DbContext Context { get; set; }
 
-        public Repository(SpotifyContext context)
+        public Repository(EPVAContext context)
         {
             this.Context = context;
             this.Query = Context.Set<T>();

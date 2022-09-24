@@ -1,10 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EPVA.Domain.GestaoCurso.Repository;
+using EPVA.Domain.PlanoAula.Repository;
+using EPVA.Repository.Context;
+using EPVA.Repository.Database;
+using EPVA.Repository.Repository;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using SpotifyLite.Domain.Account.Repository;
-using SpotifyLite.Domain.Album.Repository;
-using SpotifyLite.Repository.Context;
-using SpotifyLite.Repository.Database;
-using SpotifyLite.Repository.Repository;
 
 namespace EPVA.Repository
 {
@@ -12,17 +12,18 @@ namespace EPVA.Repository
     {
         public static IServiceCollection RegisterRepository(this IServiceCollection services, string connectionString)
         {
-            services.AddDbContext<SpotifyContext>(c =>
+            services.AddDbContext<EPVAContext>(c =>
             {
                 c.UseSqlServer(connectionString);
             });
 
             services.AddScoped(typeof(Repository<>));
-            services.AddScoped<IBandaRepository, BandaRepository>();
-            services.AddScoped<IAlbumRepository, AlbumRepository>();
-            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
-            services.AddScoped<IPlaylistRepository, PlaylistRepository>();
-            services.AddScoped<IMusicaRepository, MusicaRepository>();
+            services.AddScoped<IAulaRepository, AulaRepository>();
+            services.AddScoped<IAlunoRepository, AlunoRepository>();
+            services.AddScoped<IProfessorRepository, ProfessorRepository>();
+            services.AddScoped<IModuloRepository, ModuloRepository>();
+            services.AddScoped<IClasseRepository, ClasseRepository>();
+            services.AddScoped<IMaterialRepository, MaterialRepository>();
 
             return services;
         }

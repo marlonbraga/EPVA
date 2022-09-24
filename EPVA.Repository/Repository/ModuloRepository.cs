@@ -1,5 +1,5 @@
-﻿using EPVA.Domain.Album;
-using EPVA.Domain.Album.Repository;
+﻿using EPVA.Domain.PlanoAula;
+using EPVA.Domain.PlanoAula.Repository;
 using EPVA.Repository.Context;
 using EPVA.Repository.Database;
 

@@ -7,23 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Account\Dto\" />
-    <Folder Include="Account\Handler\Command\" />
-    <Folder Include="Account\Handler\Query\" />
-    <Folder Include="Account\Service\" />
-    <Folder Include="Account\Profile\" />
-    <Folder Include="Curso\Dto\" />
-    <Folder Include="Curso\Handler\Command\" />
-    <Folder Include="Curso\Handler\Query\" />
-    <Folder Include="Curso\Profile\" />
-    <Folder Include="Curso\Service\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="11.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="MediatR" Version="10.0.1" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EPVA.Domain\EPVA.Domain.csproj" />
   </ItemGroup>
 
 </Project>

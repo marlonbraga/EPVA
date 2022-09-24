@@ -1,5 +1,5 @@
-﻿using FluentValidation;
-using EPVA.Domain.Account.ValueObject;
+﻿using EPVA.Domain.GestaoCurso.ValueObject;
+using FluentValidation;
 using System.Text.RegularExpressions;
 
 namespace EPVA.Domain.GestaoCurso.Rules

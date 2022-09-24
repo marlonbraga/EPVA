@@ -1,5 +1,5 @@
-﻿using EPVA.Domain.Album;
-using EPVA.Domain.Album.Repository;
+﻿using EPVA.Domain.GestaoCurso;
+using EPVA.Domain.GestaoCurso.Repository;
 using EPVA.Repository.Context;
 using EPVA.Repository.Database;
 

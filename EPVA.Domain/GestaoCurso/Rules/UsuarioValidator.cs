@@ -1,5 +1,5 @@
-﻿using FluentValidation;
-using EPVA.Domain.Account.Interface;
+﻿using EPVA.Domain.GestaoCurso.Interface;
+using FluentValidation;
 
 namespace EPVA.Domain.GestaoCurso.Rules
 {

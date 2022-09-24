@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using EPVA.Domain.Curso;
+﻿using EPVA.CrossCutting.Repository;
 
 namespace EPVA.Domain.PlanoAula.Repository
 {

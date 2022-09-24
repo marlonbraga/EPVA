@@ -1,8 +1,8 @@
-﻿using EPVA.Domain.Account.ValueObject;
+﻿using EPVA.Domain.GestaoCurso.ValueObject;
 
 namespace EPVA.Domain.GestaoCurso.Interface
 {
-    internal interface IUsuario
+    public interface IUsuario
     {
         public string Nome { get; set; }
         public Email Email { get; set; }

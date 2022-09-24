@@ -1,5 +1,5 @@
 ﻿using EPVA.CrossCutting.Entity;
-using EPVA.Domain.Curso;
+using EPVA.Domain.GestaoCurso;
 
 namespace EPVA.Domain.PlanoAula
 {

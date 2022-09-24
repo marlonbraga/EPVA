@@ -1,7 +1,8 @@
-﻿using EPVA.Domain.Album;
-using EPVA.Domain.Album.Repository;
+﻿using EPVA.Domain.PlanoAula;
+using EPVA.Domain.PlanoAula.Repository;
 using EPVA.Repository.Context;
 using EPVA.Repository.Database;
+using Microsoft.EntityFrameworkCore;
 
 namespace EPVA.Repository.Repository
 {
@@ -14,7 +15,7 @@ namespace EPVA.Repository.Repository
 
         public async Task<IEnumerable<Material>> ObterTodosMateriais()
         {
-            return await this.Query.Include(x => x.Materiais).ToListAsync();
+            return (IEnumerable<Material>)await Query.Include(x => x.Materiais).ToListAsync();
         }
     }
 }
